@@ -1,0 +1,15 @@
+{
+  "short_name": "REV1",
+  "name": "REV1 - Assistente Virtual Zucchetti",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/4712/4712035.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#ffffff",
+  "theme_color": "#00b4d8",
+  "display": "standalone"
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rev1 - Assistente e Portal Zucchetti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>REV<span>1</span></h2>
+                <p>Revenda Autorizada Zucchetti</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="#chat" class="active"><i class="fa-solid fa-robot"></i> Assistente IA</a>
+                <a href="#zweb"><i class="fa-solid fa-cloud"></i> Zweb Cloud</a>
+                <a href="#bdc"><i class="fa-solid fa-book"></i> Base de Conhecimento</a>
+                <a href="#redes"><i class="fa-brands fa-instagram"></i> Redes Sociais</a>
+            </nav>
+            <div class="sidebar-footer">
+                <p><i class="fa-solid fa-headset"></i> Suporte 24/7 Ativo</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Painel de Soluções Zucchetti</h1>
+                <div class="status-badge"><span class="dot"></span> IA Conectada</div>
+            </header>
+
+            <div class="content-grid">
+                <!-- Chat IA Section -->
+                <section class="chat-sectionCard">
+                    <div class="card-header">
+                        <h3><i class="fa-solid fa-comments"></i> Chat Inteligente Rev1</h3>
+                        <p>Tire dúvidas sobre o Zweb, Clipp, regras fiscais e integrações</p>
+                    </div>
+                    <div class="chat-window" id="chatWindow">
+                        <div class="message bot">
+                            <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                            <div class="bubble">
+                                Olá! Sou o assistente virtual da sua Revenda Autorizada Zucchetti <strong>Rev1</strong>. Como posso te ajudar hoje?
+                                <br><br>
+                                Você pode consultar a <strong>Base de Conhecimento</strong>, ver vídeos do <strong>Zweb</strong> ou me fazer uma pergunta técnica!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="userInput" placeholder="Escreva sua dúvida sobre os sistemas Zucchetti..." onkeypress="handleKeyPress(event)">
+                        <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+                    </div>
+                </section>
+
+                <!-- Quick Access Resources -->
+                <section class="resources-section">
+                    <h2><i class="fa-solid fa-link"></i> Ecossistema Zucchetti</h2>
+                    <div class="cards-list">
+                        
+                        <!-- Base de Conhecimento -->
+                        <div class="resource-card">
+                            <div class="icon-box bdc-icon"><i class="fa-solid fa-book-open"></i></div>
+                            <div class="card-info">
+                                <h4>Base de Conhecimento Zweb</h4>
+                                <p>Manuais, artigos técnicos, comparativos de planos e muito mais.</p>
+                                <a href="https://bdc.zweb.com.br/" target="_blank" class="btn-link">Acessar BDC <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Playlist YouTube Zweb -->
+                        <div class="resource-card">
+                            <div class="icon-box yt-icon"><i class="fa-brands fa-youtube"></i></div>
+                            <div class="card-info">
+                                <h4>Playlist Zweb - Sistema Cloud</h4>
+                                <p>Vídeos práticos para conhecer e treinar a equipe no Zweb.</p>
+                                <a href="https://www.youtube.com/playlist?list=PLDqrLbpfwL5QbFw4tisnDzZpZwG0kEL7O" target="_blank" class="btn-link">Assistir Playlist <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Instagram Zucchetti Brasil -->
+                        <div class="resource-card">
+                            <div class="icon-box insta-icon"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="card-info">
+                                <h4>Zucchetti Brasil</h4>
+                                <p>Perfil oficial no Instagram com novidades do grupo.</p>
+                                <a href="https://www.instagram.com/zuccbrasil" target="_blank" class="btn-link">Seguir @zuccbrasil <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Instagram Clipp -->
+                        <div class="resource-card">
+                            <div class="icon-box insta-clipp-icon"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="card-info">
+                                <h4>Clipp Zucchetti</h4>
+                                <p>Dicas de gestão, novidades e recursos do Clipp.</p>
+                                <a href="https://www.instagram.com/clipp.zucchetti" target="_blank" class="btn-link">Seguir @clipp.zucchetti <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+<!-- Rodapé Godofrêdo Borborema -->
+<style>
+    .footer-rev1 {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        border-top: 1px solid #e0e0e0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+    }
+    .footer-rev1 a {
+        color: #25d366;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .footer-rev1 a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<footer class="footer-rev1">
+    <p>Desenvolvido por <strong>Godofrêdo Borborema</strong></p>
+    <a href="https://wa.me/5583991850358" target="_blank">
+        💬 Fale comigo no WhatsApp (83 99185-0358)
+    </a>
+</footer>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+   <script src="app.js"></script>
+   <link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00b4d8">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+</body>
+</html>
