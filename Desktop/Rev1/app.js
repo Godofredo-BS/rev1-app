@@ -72,20 +72,13 @@ async function sendMessage() {
         // Chamada para o backend Python
         // ----------------------------------------------------
 
-        const response = await fetch(API_URL, {
-
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-
-            body: JSON.stringify({
-                message: text
-            })
-        });
-
+const response = await fetch("https://rev1-backend.onrender.com/api/chat", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ message: text })
+});
 
         // ----------------------------------------------------
         // Verifica HTTP
